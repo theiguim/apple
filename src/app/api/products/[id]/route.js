@@ -12,5 +12,4 @@ export async function GET(req, {params}){
             "Content-Type":"application/json",
         },
     });
-
 };

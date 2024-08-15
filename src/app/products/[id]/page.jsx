@@ -18,9 +18,6 @@ export const generateMetadata = async ({ params }) => {
     return {
         title: product.name,
         description: product.description,
-        icons: {
-            icon: "/favicon.ico"
-        }
     }
 }
 
