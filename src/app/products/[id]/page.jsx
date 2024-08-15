@@ -3,15 +3,6 @@ import { fetchProduct, fetchProducts } from "@/services/products";
 import { Container } from "reactstrap";
 
 
-export const generateStaticParams = async () => {
-
-    const products = await fetchProducts();
-
-    return products.map(product => ({
-        id: product.id.toString()
-    }))
-};
-
 export const generateMetadata = async ({ params }) => {
     const { id } = params;
     const product = await fetchProduct(id);
