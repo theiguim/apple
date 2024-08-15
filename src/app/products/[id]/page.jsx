@@ -2,7 +2,7 @@ import ProductDetails from "@/components/ProductDetails";
 import { fetchProduct, fetchProducts } from "@/services/products";
 import { Container } from "reactstrap";
 
-export const generateStaticParams = async () => {
+export async funcion generateStaticParams () {
 
     const products = await fetchProducts();
     console.log(products)
@@ -11,7 +11,7 @@ export const generateStaticParams = async () => {
     }))
 };
 
-export const generateMetadata = async ({ params }) => {
+export async function generateMetadata ({ params }){
     const { id } = params;
     const product = await fetchProduct(id);
     return {
